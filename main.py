@@ -27,7 +27,7 @@ for headline in headlines:
 
     news_data.append({"title": news_text, "grade": sentiment_label})
 
-    print("Тональность:", sentiment_label)
+    print("Key:", sentiment_label)
     print('\n')
 
 print("done")
