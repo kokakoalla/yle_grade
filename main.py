@@ -33,8 +33,3 @@ for headline in headlines:
 print("done")
 
 
-for item in news_data:
-    print(f"Title: {item['title']}")
-    print(f"Grade: {item['grade']}")
-    print('\n')
-
