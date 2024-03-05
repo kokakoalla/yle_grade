@@ -1,4 +1,4 @@
-import requests
+import requests # pip install requests
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 
