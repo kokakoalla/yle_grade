@@ -10,3 +10,12 @@ gets news form YLE, and makes a funny short extract of those articles.
 4. Check ot existing AI services. Preferably free or dirt cheap.
 5. Select a hosting method/provider to display the results.
 6. Conider YLE.LOL domain
+
+
+## Installation procedure:
+
+1. PowerShell 7 : https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#msi
+
+
+2. Azure CLI (in case deployment is done to Azure): 
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
