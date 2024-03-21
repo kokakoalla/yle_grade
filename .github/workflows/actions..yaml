@@ -1,0 +1,31 @@
+name: Deploy on push
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: your-dockerhub-username/your-image-name
+          tag_with_ref: true
+
+      - name: SSH into VDS and redeploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VDS_HOST }}
+          username: ${{ secrets.VDS_USERNAME }}
+          password: ${{ secrets.VDS_PASSWORD }}
+          script: |
+            docker-compose -f /path/to/your/docker-compose.yml up -d
