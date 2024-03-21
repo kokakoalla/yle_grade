@@ -17,18 +17,5 @@ gets news form YLE, and makes a funny short extract of those articles.
 1. PowerShell 7 : https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#msi
 
 
-
-ADV CODE Oy.. 44 640,00 0,00
-Selvitystili.. 0,00 42,80
-Glamood.com.. 985,15 0,00
-Glamood.com.. palautus 0,00 231,00
-Automaattinosto.. 380,00 0,00
-Automaattinosto.. 400,00 0,00
-Teboil ostpvm... 23.01.2024 
-Booking 3 adults + 1 child.. 424,00 0,00
-Ikea - lisätiedot ostosta.. 843,53 0,00
-Tmi Ekaterina Nironen / viite 1588.. 148,80 0,00
-Nummela hotelli for 4.. 212,00 0,00
-Kuitti on, tarvitaan lisätietoja: Lego / mäti / lonkero... .. 446,55 0,00
-Kuitti on, mutta tarvitaan lisätietietoja.. 351,23 0,00
-Automaattinosto.. 400,00 0,00
+2. Azure CLI (in case deployment is done to Azure): 
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
